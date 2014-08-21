@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Developer Assignment</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <script type="text/javascript" data-main="js/app" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
+</head>
+<body>
+  <div id="app" class="jumbotron">
+    <h1>Users</h1>
+
+    <table class="table table-bordered" id="data-list">
+      <tr>
+        <th>#</th>
+	      <th>Username</th>
+	      <th>Roles</th>
+	    </tr>
+      <tbody id="data-list-items"></tbody>
+    </table>
+
+    <h2>Create new</h2>
+
+    <form role="form" id="data-form" action="/api/users" method="POST">
+      <div class="alert alert-danger hidden"></div>
+      <div class="form-group">
+        <label for="inputUsername">Username</label>
+        <input type="text" class="form-control" id="inputUsername" placeholder="Enter Username">
+      </div>
+      <div class="form-group">
+        <label for="inputPassword">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password">
+      </div>
+      <button type="button" class="btn btn-default">Submit</button>
+    </form>
+
+    <script type="text/template" id="itemsTpl">
+      <% _.each(items, function(item) { %>
+      <tr>
+        <td><%- item.id %></td>
+        <td><%- item.username %></td>
+        <td><%- item.roles.join(", ") %></td>
+      </tr>
+      <% }); %>
+    </script>
+</body>
+</html>
