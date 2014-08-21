@@ -1,9 +1,4 @@
-# Instructions
-Clone this repository and return your answer as zip-file containing all the relevant files (including .git, so that we can see your commit history). 
-
-There's no single 'correct' answer for these assignments, but the goal is to allow you to demonstrate your JS skills. Elegant solutions gain extra points.
-
-# Backend assignment
+# Backend tasks
 
 In the `backend` folder you can find a skeleton for a simple app. These assignments require you to modify and add code as needed. You should also add test cases when you think that's appropriate.
 
@@ -30,7 +25,5 @@ When listing users with
 Make sure passwords (and other non-public properties) are not sent. _Hint_: check [serverbone](https://github.com/Everyplay/serverbone) codebase.
 
 
-# Frontend assignment
+# Frontend tasks
 Make a simple frontend app: 'admin' GUI for the previously built backend using [BackboneJS](http://backbonejs.org/) or [React](http://facebook.github.io/react/) or both. With the app, you should be able to create new users and list created users.
-
-You may use additional 3rd party libs too if you like. Make sure to write tests also for the frontend!
